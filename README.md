@@ -123,6 +123,7 @@ You can use **Wireshark** to capture network packets in the simulated environmen
 - **Advanced World Map Visualization**: Show network traffic data on the world map with more granular details.
 - **Live Data Stream**: Integrate actual network monitoring tools to fetch live data (e.g., Wireshark, Scapy).
 <img width="440" alt="{55DB38E1-569F-44EF-A3BD-2D3992972A57}" src="https://github.com/user-attachments/assets/61467eb5-c580-48da-ae42-3da15051f5d4" />
+
 - **AI-based Fault Detection**: Implement machine learning to predict and detect faults in the network in real-time.
 
 ### Future Considerations:
