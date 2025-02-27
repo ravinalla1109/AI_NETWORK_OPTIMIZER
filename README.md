@@ -150,5 +150,3 @@ We welcome contributions to this project! If you'd like to help out, please foll
 - **Grafana**: Used for monitoring and visualizing network data.
 - **Docker**: For simulating network environments.
 - **Wireshark**: For network traffic analysis.
-
-```
