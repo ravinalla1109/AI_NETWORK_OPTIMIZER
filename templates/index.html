@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Include Leaflet.js for Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">AI Network Optimizer</a>
+        </div>
+    </header>
+
+    <main class="container mt-5">
+        <h2>Welcome to the AI-Driven Autonomous Network Optimizer</h2>
+        <p class="lead">Optimize network traffic, monitor performance, and evaluate AI-driven improvements in real-time.</p>
+
+        <!-- Optimize Network Traffic Section -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h4>Optimize Network Traffic</h4>
+            </div>
+            <div class="card-body">
+                <form id="optimizeForm">
+                    <div class="mb-3">
+                        <label for="metric" class="form-label">Select Network Metric</label>
+                        <select class="form-control" id="metric">
+                            <option value="latency">Latency</option>
+                            <option value="packet_loss">Packet Loss</option>
+                            <option value="throughput">Throughput</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="value" class="form-label">Enter Network Value</label>
+                        <input type="number" class="form-control" id="value" placeholder="Enter the value (e.g., 50 for latency)">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Optimize</button>
+                </form>
+                <div id="optimizationResult" class="mt-4"></div>
+            </div>
+        </div>
+
+        <!-- Network Performance Metrics Section -->
+        <div class="card">
+            <div class="card-header">
+                <h4>Network Performance Metrics</h4>
+            </div>
+            <div class="card-body">
+                <button class="btn btn-secondary" onclick="getNetworkMetrics()">Fetch Live Data</button>
+                <div id="networkMetrics" class="mt-4"></div>
+            </div>
+        </div>
+
+        <!-- Network Data Visualization Section -->
+        <div class="card mt-4">
+            <div class="card-header">
+                <h4>Network Performance Visualization</h4>
+            </div>
+            <div class="card-body">
+                <canvas id="networkChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+
+        <!-- World Map Visualization Section -->
+        <div class="card mt-4">
+            <div class="card-header">
+                <h4>Network Traffic on World Map</h4>
+            </div>
+            <div class="card-body">
+                <div id="worldMap" style="height: 400px;"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>Powered by AI and Flask - Autonomous Network Optimizer</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
